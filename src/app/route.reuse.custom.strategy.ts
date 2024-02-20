@@ -12,7 +12,6 @@ export class CustomReuseStrategy implements RouteReuseStrategy {
 
 
   shouldDetach(route: any): boolean {
-    debugger
     if (!route.routeConfig || route.routeConfig.loadChildren) {
       return false;
     }
