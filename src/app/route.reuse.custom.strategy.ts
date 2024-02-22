@@ -1,11 +1,14 @@
 import { RouteReuseStrategy, DetachedRouteHandle, ActivatedRouteSnapshot } from '@angular/router';
 import { Injectable } from "@angular/core";
 
+// contact compo has default angular cre / destroy behavior
+// home compo is only created once and then reused
+
 @Injectable()
 export class CustomReuseStrategy implements RouteReuseStrategy {
 
   private storedRoutes = new Map<string, DetachedRouteHandle>();
-  private pathsExceptions = ['error'];
+  private pathsExceptions = ['contact'];
 
 
   constructor() { }

@@ -2,20 +2,20 @@ import { Component, OnDestroy } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-Contact',
   standalone: true,
   imports: [RouterModule],
   template: `
     <p>
-      home works!
+      Contact works!
     </p>
-    <a [routerLink]="['/contact/']" routerLinkActive="active">link to contact component</a>
+    <a routerLink="/home/">link to home component</a>
 
   `,
   styles: ``
 })
-export class HomeComponent implements OnDestroy {
+export class ContactComponent implements OnDestroy {
   ngOnDestroy(): void {
-    console.log('Home compo destroyed');
+    console.log('Contact compo destroyed');
   }
 }

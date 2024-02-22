@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,9 @@ import { Component } from '@angular/core';
   `,
   styles: [],
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+  ngOnDestroy(): void {
+    console.log('App compo destroyed');
+  }
   title = 'angular2-route-reuse-examples';
 }
